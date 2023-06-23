@@ -1,0 +1,1 @@
+alter table chart add IsZakat int not null default 0

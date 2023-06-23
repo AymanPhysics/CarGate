@@ -1,0 +1,1 @@
+alter table suppliers add Type int not null default 0

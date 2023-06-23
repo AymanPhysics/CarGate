@@ -1,0 +1,1 @@
+alter table ProductionItemCollectionMotionMaster add AvgCost float

@@ -1,0 +1,1 @@
+alter table SalesDeliveryHistory add Payed float

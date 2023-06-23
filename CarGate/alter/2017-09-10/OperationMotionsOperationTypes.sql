@@ -1,0 +1,1 @@
+alter table OperationMotionsOperationTypes add Line int identity(1,1)

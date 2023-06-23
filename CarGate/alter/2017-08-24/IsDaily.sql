@@ -1,0 +1,1 @@
+alter table ServiceTypes add IsDaily int not null default 0

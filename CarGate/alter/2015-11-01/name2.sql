@@ -1,0 +1,1 @@
+alter table DrugsDoses alter column name2 nvarchar(400)

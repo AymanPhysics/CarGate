@@ -1,0 +1,1 @@
+alter table employees add CONSTRAINT CONSTRAINT_CurrentShift DEFAULT(0) FOR CurrentShift

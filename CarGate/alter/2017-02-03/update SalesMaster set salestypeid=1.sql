@@ -1,0 +1,1 @@
+update SalesMaster set salestypeid=1

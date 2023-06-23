@@ -1,0 +1,9 @@
+alter table customers add MobileNumber nvarchar(100)
+alter table customers add WhatsappNumber nvarchar(100)
+alter table customers add UniversityId int
+alter table customers add WorkPlace nvarchar(1000)
+alter table customers add DateOfBirth datetime
+alter table customers add SpecialtyId int
+alter table customers add SubSpecialtyId int
+alter table customers add DegreeId int
+alter table customers add TitleId int

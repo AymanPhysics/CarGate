@@ -1,0 +1,1 @@
+alter table OperationMotions add NoOfDays int not null default 0

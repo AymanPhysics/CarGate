@@ -1,0 +1,1 @@
+alter table CustomerInsures add NationalID nvarchar(100)

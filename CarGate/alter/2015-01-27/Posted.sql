@@ -1,0 +1,1 @@
+alter table RoomsData add Posted int

@@ -1,0 +1,1 @@
+alter table ProfitRatioDetails alter column ItemId bigint

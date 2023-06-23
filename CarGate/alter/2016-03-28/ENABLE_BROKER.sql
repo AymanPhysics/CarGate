@@ -1,0 +1,1 @@
+select 'ALTER DATABASE '+name+' SET ENABLE_BROKER',* from sys.databases where database_id>4

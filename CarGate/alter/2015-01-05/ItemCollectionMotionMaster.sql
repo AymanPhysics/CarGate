@@ -1,0 +1,1 @@
+alter table ItemCollectionMotionMaster add MotionTypeId int

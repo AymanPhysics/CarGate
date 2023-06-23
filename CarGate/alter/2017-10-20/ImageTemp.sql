@@ -1,0 +1,1 @@
+create table ImageTemp(Image Image,Line bigint identity)

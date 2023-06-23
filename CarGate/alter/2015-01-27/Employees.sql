@@ -1,0 +1,1 @@
+alter table Employees add C10 int,C11 int,C12 int,C13 int,C14 int,C15 int,C16 int,C17 int,C18 int,C19 int,C20 int

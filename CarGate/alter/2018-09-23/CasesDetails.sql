@@ -1,0 +1,1 @@
+alter table CasesDetails add VisitingTypeId int not null default 0

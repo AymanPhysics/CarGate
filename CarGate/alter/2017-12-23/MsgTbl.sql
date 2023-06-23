@@ -1,0 +1,1 @@
+create table MsgTbl(UserName int,Msg nvarchar(1000),Line bigint identity(1,1))

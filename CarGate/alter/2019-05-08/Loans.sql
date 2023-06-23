@@ -1,0 +1,1 @@
+alter table Loans add SaveId int not null default 0

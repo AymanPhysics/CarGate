@@ -1,0 +1,1 @@
+alter table OperationTypeRooms drop column price2

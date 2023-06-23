@@ -1,0 +1,1 @@
+alter table ImportMessages add Cost_InvoiceNo float,Cost_MessageId float,Cost_OrderTypeId float,Cost_Administrative float

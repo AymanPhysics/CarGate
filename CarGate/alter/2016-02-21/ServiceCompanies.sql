@@ -1,0 +1,1 @@
+alter table ServiceCompanies add Notes nvarchar(1000)

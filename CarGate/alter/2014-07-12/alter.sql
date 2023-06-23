@@ -1,0 +1,1 @@
+alter table cases2 add FileNo nvarchar(100),FileYear nvarchar(100),DisionYear nvarchar(100)

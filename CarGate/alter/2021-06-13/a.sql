@@ -1,0 +1,1 @@
+update customers set Person=isnull(Person,'')

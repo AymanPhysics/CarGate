@@ -1,0 +1,1 @@
+alter table InstallmentInvoicesDateils add constraint ct_IsDelayed default(0) for IsDelayed

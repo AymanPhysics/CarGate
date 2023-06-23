@@ -1,0 +1,1 @@
+alter TABLE [dbo].[Services] drop constraint [PK_Services]

@@ -1,0 +1,1 @@
+Alter table AppartementsSales add Payed2 float

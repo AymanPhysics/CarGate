@@ -1,0 +1,15 @@
+update CaseInvoices set
+Total1=ROUND(Total1,2),
+Total2	=ROUND(Total2,2),
+Total3	=ROUND(Total3,2),
+Total4	=ROUND(Total4,2),
+Perc	=ROUND(Perc,2),
+Total	=ROUND(Total,2),
+Total0	=ROUND(Total0,2),
+Discount	=ROUND(Discount,2),
+Bal	=ROUND(Bal,2),
+Total01	=ROUND(Total01,2),
+ConsumablesValue	=ROUND(ConsumablesValue,2),
+Remaining	=ROUND(Remaining,2),
+Total00	=ROUND(Total00,2),
+Perc0	=ROUND(Perc0,2)

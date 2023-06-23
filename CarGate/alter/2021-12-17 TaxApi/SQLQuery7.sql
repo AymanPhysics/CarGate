@@ -1,0 +1,1 @@
+alter table SalesMasterETA add NeedReSubmit int not null default 0

@@ -1,0 +1,1 @@
+alter table SalesDeliveryHistory alter column SalesDetailsInvoiceNo nvarchar(100)

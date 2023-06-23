@@ -1,0 +1,1 @@
+alter table items add GPC_Id bigint

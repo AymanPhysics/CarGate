@@ -1,0 +1,1 @@
+alter table KidneysWashMotion add MM int,YY int

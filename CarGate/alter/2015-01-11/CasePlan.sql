@@ -1,0 +1,1 @@
+alter table cases add CasePlan nvarchar(4000)

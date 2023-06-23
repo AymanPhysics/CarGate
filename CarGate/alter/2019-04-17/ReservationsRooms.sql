@@ -1,0 +1,1 @@
+ alter table ReservationsRooms add Outdate datetime

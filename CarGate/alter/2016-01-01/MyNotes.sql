@@ -1,0 +1,1 @@
+alter table Reservations add MyNotes nvarchar(100)

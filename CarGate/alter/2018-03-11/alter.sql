@@ -1,0 +1,9 @@
+alter table CaseInvoices add IsPosted int not null default 0
+alter table SalesMaster add IsPosted int not null default 0
+alter table DeletedSalesMaster add IsPosted int not null default 0
+alter table Entry add IsPosted int not null default 0
+alter table DeletedEntry add IsPosted int not null default 0
+alter table BankCash_G2 add IsPosted int not null default 0
+alter table DeletedBankCash_G2 add IsPosted int not null default 0
+alter table BankCash_G22 add IsPosted int not null default 0
+alter table DeletedBankCash_G22 add IsPosted int not null default 0

@@ -1,0 +1,1 @@
+alter table ImportMessagesDetailsSub add Qty3 float,QtyRecieved float

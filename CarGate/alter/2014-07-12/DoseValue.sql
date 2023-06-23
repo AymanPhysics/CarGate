@@ -1,0 +1,1 @@
+alter table cases2 add DoseValue float

@@ -1,0 +1,1 @@
+alter table Reservations add CONSTRAINT [PK_Reservations] PRIMARY KEY CLUSTERED ([EmpId],[DayDate],[ReservId])

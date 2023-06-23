@@ -1,0 +1,1 @@
+alter table CasesHistoryAll add Line bigint identity

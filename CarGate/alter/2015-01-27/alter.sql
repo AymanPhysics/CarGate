@@ -1,0 +1,1 @@
+alter table cases add Summary nvarchar(4000)

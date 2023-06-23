@@ -1,0 +1,1 @@
+alter table  Customers add TempBal0 float

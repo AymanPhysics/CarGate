@@ -1,0 +1,1 @@
+master.dbo.rs 'S_Nawar','F:\nawar OMEGA_backup_2015_11_18_120002_5156250.bak'

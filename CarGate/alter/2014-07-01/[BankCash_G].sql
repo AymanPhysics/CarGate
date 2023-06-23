@@ -1,0 +1,22 @@
+CREATE TABLE [dbo].[BankCash_G](
+	[InvoiceNo] [int] NOT NULL,
+	[Flag] [int] NOT NULL,
+	[DayDate] [datetime] NULL,
+	[BankId] [int] NOT NULL,
+	CostTypeId [int] default(0),
+	LinkFile [int] default(0),
+	[SubAccNo] [int] NULL,
+	[Value] [float] NULL,
+	[Canceled] [int] NULL,
+	[Notes] [nvarchar](1000) NULL,
+	[UserName] [int] NULL,
+	[MyGetDate] [datetime] NULL,
+	[CostCenterId] [int] NULL,
+	[CurrencyId] [int] NULL,
+	DocNo  [nvarchar](1000) NULL,
+	PurchaseAccNo varchar(100),
+    ImportMessageId bigint,
+    StoreId bigint,
+    StoreInvoiceNo bigint,
+ )
+ 

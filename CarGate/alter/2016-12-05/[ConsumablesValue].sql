@@ -1,0 +1,1 @@
+alter TABLE [dbo].[OperationMotions] alter column [ConsumablesValue] [float] 

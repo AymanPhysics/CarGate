@@ -1,0 +1,1 @@
+alter table ImportMessages add Perc float
