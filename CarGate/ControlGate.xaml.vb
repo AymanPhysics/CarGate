@@ -18,6 +18,8 @@ Public Class ControlGate
         AddHandler bg.DoWork, AddressOf bg_DoWork
         AddHandler bg.RunWorkerCompleted, AddressOf bg_RunWorkerCompleted
         LoadCarTypes()
+        btnOpen.Visibility = Visibility.Hidden
+        btnClose.Visibility = Visibility.Hidden
 
     End Sub
 
