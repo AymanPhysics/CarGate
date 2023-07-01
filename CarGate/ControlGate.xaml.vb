@@ -18,9 +18,10 @@ Public Class ControlGate
         AddHandler bg.DoWork, AddressOf bg_DoWork
         AddHandler bg.RunWorkerCompleted, AddressOf bg_RunWorkerCompleted
         LoadCarTypes()
-        btnOpen.Visibility = Visibility.Hidden
+        'btnOpen.Visibility = Visibility.Hidden
         btnClose.Visibility = Visibility.Hidden
 
+        Send("2")
     End Sub
 
     Private Sub LoadCarTypes()
@@ -66,18 +67,12 @@ Public Class ControlGate
     End Sub
 
     Private Sub btnPrintAll_Click(sender As Object, e As RoutedEventArgs) Handles btnPrintAll.Click
-        If bm.ExecuteNonQuery("insert ControlGate(UserName,Title,Price)values(" & Md.UserName & ",'" & CurrentTitle.Replace(",", "''") & "'," & CurrentPrice & ")") Then
-            Dim rpt As New ReportViewer
-            'rpt.Header = CType(Parent, Window).Title
-            rpt.paraname = New String() {"Price", "Title"}
-            rpt.paravalue = New String() {CurrentPrice, CurrentTitle}
-            rpt.Rpt = "PrintCarGate.rpt"
-            'rpt.Show()
-            rpt.Print()
-            'SetLbl(CurrentPrice)
-            btnOpen_Click(Nothing, Nothing)
-
+        If CurrentTitle = "" Then
+            bm.ShowMSG("برجاء تحديد نوع السيارة")
+            Return
         End If
+        btnOpen_Click(Nothing, Nothing)
+
     End Sub
 
     Private Sub btnOpen_Click(sender As Object, e As RoutedEventArgs) Handles btnOpen.Click
@@ -85,7 +80,7 @@ Public Class ControlGate
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As RoutedEventArgs) Handles btnClose.Click
-        Send("0")
+        Send("2")
     End Sub
 
     Sub Send(str As String)
@@ -95,15 +90,36 @@ Public Class ControlGate
                 SetLbl("No serial ports found.")
             Else
                 For Each portName As String In portNames
-                    Dim myserialPort = New SerialPort(portName, 9600)
-                    myserialPort.Open()
-                    myserialPort.Write(str)
-                    myserialPort.Close()
-                    If str = "1" Then
-                        SetLbl("Openned")
-                    ElseIf str = "0" Then
-                        SetLbl("Closed")
-                    End If
+                    Dim myserialPort = New SerialPort(portName, 9600, Parity.None, 8, StopBits.One)
+                    Try
+                        myserialPort.Open()
+                        myserialPort.Write(str)
+                        If str = "1" Then
+                            SetLbl("Openned")
+                            'ElseIf str = "2" Then
+                            '    SetLbl("Closed")
+                        End If
+                        myserialPort.ReadTimeout = 1000
+                        Dim Data As String = myserialPort.ReadLine
+                        If str = "1" Then
+                            If Data = "1" & vbCr Then
+                                If bm.ExecuteNonQuery("insert ControlGate(UserName,Title,Price)values(" & Md.UserName & ",'" & CurrentTitle.Replace(",", "''") & "'," & CurrentPrice & ")") Then
+                                    Dim rpt As New ReportViewer
+                                    'rpt.Header = CType(Parent, Window).Title
+                                    rpt.paraname = New String() {"Price", "Title"}
+                                    rpt.paravalue = New String() {CurrentPrice, CurrentTitle}
+                                    rpt.Rpt = "PrintCarGate.rpt"
+                                    'rpt.Show()
+                                    rpt.Print()
+                                    'SetLbl(CurrentPrice)
+                                End If
+                            End If
+                        End If
+                    Catch ex As Exception
+                        SetLbl(ex.Message & vbCrLf & str)
+                    Finally
+                        myserialPort.Close()
+                    End Try
                 Next
             End If
         Catch ex As Exception

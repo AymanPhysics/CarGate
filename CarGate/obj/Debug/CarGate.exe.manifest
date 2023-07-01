@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CarGate.exe" size="7322624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CarGate.exe" size="7323136">
       <assemblyIdentity name="CarGate" version="3.1.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZW5h5X3TelDoo3fXCrd2M6BoAAVXGdtCSENmImP2zrM=</dsig:DigestValue>
+        <dsig:DigestValue>NuOQri07JGzwK9ZANRLqN0eV5aoTra22VDioGHNl+3I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
